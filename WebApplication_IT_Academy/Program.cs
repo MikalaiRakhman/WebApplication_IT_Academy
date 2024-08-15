@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Text.Json;
 using WebApplication_IT_Academy;
 
@@ -18,6 +19,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// just check here PerfomanceStats
+PerformanceStats sur = new PerformanceStats();
+Console.WriteLine(JsonSerializer.Serialize(sur));
 
 var weatherForecast = new WeatherForecast
 {
